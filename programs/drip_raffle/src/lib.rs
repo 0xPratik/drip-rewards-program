@@ -7,7 +7,7 @@ pub use errors::ErrorCode;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("GtuWk2HjbKSNCn3t15jeyXD4qCjd6hXHN38RYetgkwAd");
+declare_id!("8dctDFAvn58rNoBbykB6PSakMYh3HdANBbHsbvoLtuep");
 
 #[program]
 pub mod drip_raffle {
@@ -17,10 +17,10 @@ pub mod drip_raffle {
     pub fn create_raffle(
         ctx: Context<CreateRaffle>,
         end_date: i64,
-        max_entries: u8,
+
         collections: Vec<Collection>,
     ) -> Result<()> {
-        create_raffle::handler(ctx, end_date, max_entries, collections)
+        create_raffle::handler(ctx, end_date, collections)
     }
 
     pub fn deposit_nft(ctx: Context<DepositSplReward>) -> Result<()> {

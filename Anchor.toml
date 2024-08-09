@@ -5,7 +5,7 @@ seeds = false
 skip-lint = false
 
 [programs.devnet]
-drip_raffle = "GtuWk2HjbKSNCn3t15jeyXD4qCjd6hXHN38RYetgkwAd"
+drip_raffle = "8dctDFAvn58rNoBbykB6PSakMYh3HdANBbHsbvoLtuep"
 
 [registry]
 url = "https://api.apr.dev"

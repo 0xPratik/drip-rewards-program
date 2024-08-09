@@ -53,7 +53,7 @@ pub struct Raffle {
     pub bump: u8,
     pub entries: u8,
     pub end_date: i64,
-    pub max_entries: u8,
+
     pub sold_tickets: u16,
     pub collections: Vec<Collection>, // 4 + 32 +
     pub reward: RaffleRewardType,

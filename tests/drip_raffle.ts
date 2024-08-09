@@ -59,7 +59,6 @@ describe("drip_raffle", () => {
         Buffer.from("raffle"),
         wallet.publicKey.toBuffer(),
         Buffer.from(new BigUint64Array([BigInt(end_date)]).buffer),
-        Buffer.from([max_entries]),
       ],
       program.programId
     );
@@ -71,7 +70,7 @@ describe("drip_raffle", () => {
     // Add your test here.
 
     const tx = await program.methods
-      .createRaffle(new anchor.BN(end_date), max_entries, collection)
+      .createRaffle(new anchor.BN(end_date), collection)
       .accounts({
         authority: wallet.publicKey,
         raffleAccount: raffle_account,
